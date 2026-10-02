@@ -10,3 +10,20 @@
 @media(max-width:1100px){.future-card{padding:22px}.future-card h3{font-size:21px}.founder-inner{gap:35px}.founder-inner h2{font-size:25px}}
 @media(max-width:800px){.founder-inner{grid-template-columns:1fr;padding:50px 0;gap:25px}.founder-inner h2{font-size:27px}.future-cards{grid-template-columns:1fr;gap:24px;margin-top:35px}.future-card{padding:28px}.future-card h3{font-size:24px;margin:16px 0 12px}.future-note{text-align:left}.future-example{margin-top:0}.future-card .future-goal{font-size:17px}}
 @media(max-width:480px){.founder-inner h2{font-size:23px}.founder-copy p{font-size:15px}.field-origin{font-size:13px}.future-card{padding:23px}.future-card h3{font-size:22px}.future-card .future-lead{font-size:17px}.future-status{font-size:13px}}
+
+
+/* Proposal 03: photo blends into the existing white hero. */
+.photo-hero{position:relative;isolation:isolate;overflow:hidden;background:white}
+.hero-photo{position:absolute;z-index:-2;inset:0 0 0 auto;width:70%;height:100%;object-fit:cover;object-position:75% center}
+.photo-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#fff 0%,#fff 36%,#ffffffed 44%,#ffffff85 54%,#ffffff00 68%)}
+.photo-hero .hero{min-height:760px;padding-top:80px;padding-bottom:70px}
+.photo-hero .hero-copy{position:relative;z-index:1}
+.photo-hero .photo-visual{height:600px;background:none;padding:0;align-self:center}
+.photo-hero .photo-visual:before,.photo-hero .photo-visual:after{display:none}
+.photo-hero .notification{position:absolute;left:8%;right:auto;top:34%;bottom:auto;padding:17px;max-width:350px;background:#ffffffef}
+.record-preview{position:absolute;left:0;right:0;bottom:0;background:#fffffff2;border:1px solid var(--line);border-radius:12px;padding:23px;box-shadow:0 16px 45px #17353620}
+.record-heading{display:flex;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:13px}.record-heading strong{font-size:19px;color:var(--teal)}.record-heading small{margin-left:auto;color:var(--muted);font-size:10px}
+.record-rows{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:22px}.record-rows>div{display:flex;flex-direction:column;gap:6px}.record-rows b{font-size:12px}.record-rows small{font-size:10px;color:var(--muted)}
+@media(max-width:1100px){.photo-hero .hero{gap:15px}.photo-hero .notification{left:0;font-size:11px}.record-preview{padding:17px}}
+@media(max-width:800px){.photo-hero .hero{padding-top:45px;padding-bottom:35px;min-height:0}.hero-photo{top:auto;bottom:0;width:100%;height:540px;object-position:75% center}.photo-hero:before{background:linear-gradient(180deg,#fff 0%,#fff 43%,#ffffffdd 52%,#ffffff00 69%)}.photo-hero .photo-visual{height:470px;max-width:580px}.photo-hero .notification{top:28%;left:0}.record-preview{bottom:0}.photo-hero .hero-copy{text-align:center}}
+@media(max-width:480px){.photo-hero .photo-visual{height:420px}.hero-photo{height:460px;width:130%;max-width:none;right:-10%;object-position:75% center}.photo-hero .notification{top:28%;padding:12px;max-width:290px}.record-heading{gap:10px}.record-rows{gap:10px}.record-preview{padding:15px}.record-rows b{font-size:11px}.record-rows small{font-size:8px}}
