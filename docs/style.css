@@ -37,3 +37,6 @@ a:not(.button):not(.brand):hover{color:var(--link-hover);text-decoration-thickne
 a:not(.brand):focus-visible{outline:3px solid #1755a5;outline-offset:5px}
 .contact-section a:focus-visible{outline-color:#fff}
 @media(prefers-reduced-motion:reduce){a:not(.button):not(.brand){transition:none}}
+
+/* Make room for the full product wordmark without crowding navigation. */
+@media(min-width:801px) and (max-width:960px){header{height:76px}#menu{display:block;background:none;border:0;padding:10px;width:44px;height:44px}#menu span{display:block;background:var(--ink);height:2px;margin:6px 0}nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:25px;box-shadow:0 15px 30px #163c3110}nav.open{display:flex;flex-direction:column;align-items:stretch;gap:20px;font-size:16px}}
